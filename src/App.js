@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Counter from './Components/Counter';
+import ScreenComponent from './Components/ScreenComponent';
+import UseUseStateHook from './Pages/UseUseStateHook';
+import CallFComponent from './Pages/UseEffect/CallFComponent';
+import UseUseRefHook from './Pages/UseUseRefHook';
+import UseUseMemoHook from './Pages/UseUseMemoHook';
+import Main from './Pages/ContextAPI/Main';
+import MainContextHook from './Pages/UseContextHook/MainContextHook';
+import MainFile from './Pages/LiftingStateUp/MainFile';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Counter /> */}
+      {/* <ScreenComponent /> */}
+      {/* <UseUseStateHook /> */}
+      {/* <CallFComponent /> */}
+      {/* <UseUseRefHook /> */}
+      {/* <UseUseMemoHook /> */}
+      <Main />
+      <MainContextHook />
+      <MainFile />
     </div>
   );
 }
