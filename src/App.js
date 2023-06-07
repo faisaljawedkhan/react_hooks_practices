@@ -8,19 +8,21 @@ import UseUseMemoHook from './Pages/UseUseMemoHook';
 import Main from './Pages/ContextAPI/Main';
 import MainContextHook from './Pages/UseContextHook/MainContextHook';
 import MainFile from './Pages/LiftingStateUp/MainFile';
+import UseReducerHook from './UseReducerHook';
 
 function App() {
   return (
     <div className="App">
+      <UseReducerHook />
       {/* <Counter /> */}
       {/* <ScreenComponent /> */}
       {/* <UseUseStateHook /> */}
       {/* <CallFComponent /> */}
       {/* <UseUseRefHook /> */}
       {/* <UseUseMemoHook /> */}
-      <Main />
-      <MainContextHook />
-      <MainFile />
+      {/* <Main /> */}
+      {/* <MainContextHook /> */}
+      {/* <MainFile /> */}
     </div>
   );
 }
