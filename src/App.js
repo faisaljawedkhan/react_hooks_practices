@@ -14,12 +14,17 @@ import AddAndDeleteNewData from './Pages/UseReducerHook/AddAndDeleteNewData';
 import AxiosPostMethod from './Pages/AxiosFile/AxiosPostMethod';
 import UseMemoHook from './Pages/MemoAndCallback/UseMemoHook';
 import UseCallbackHook from './Pages/MemoAndCallback/UseCallbackHook';
+import { Provider } from 'react-redux';
+import store from './Pages/ReactRedux/Store';
+import BookContainer from "./Pages/ReactRedux/BookContainer"
 
 function App() {
   return (
+    <Provider store={store}>
     <div className="App">
+      <BookContainer />
       {/* <UseMemoHook /> */}
-      <UseCallbackHook />
+      {/* <UseCallbackHook /> */}
       {/* <UseReducerHook /> */}
       {/* <AddAndDeleteData /> */}
       {/* <AddAndDeleteNewData /> */}
@@ -34,6 +39,7 @@ function App() {
       {/* <MainContextHook /> */}
       {/* <MainFile /> */}
     </div>
+    </Provider>
   );
 }
 
