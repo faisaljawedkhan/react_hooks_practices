@@ -1,0 +1,51 @@
+
+.main-form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-form-div input {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.main-form-div button {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.addDeleteUL {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addDeleteUL li {
+    background: #404040;
+    border-radius: 31px;
+    padding: 2rem 0;
+    margin: 1rem 0;
+    width: 600px;
+    color: #FFFFFF;
+}
+
+.addDeleteUL li .addDeleteH2Tag {
+    margin-top: -1rem;
+    font-size: 23px;
+}
+
+.addDeleteUL li .addDeleteH3Tag {
+    margin-top: -10px;
+    font-size: 21px;
+}
+
+.addDeleteUL li .delete-btn {
+    padding: 0.5rem 2rem;
+    color: #FFFFFF;
+    margin-top: -10px;
+    font-size: 19px;
+    cursor: pointer;
+}
