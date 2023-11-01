@@ -17,12 +17,43 @@ import UseCallbackHook from './Pages/MemoAndCallback/UseCallbackHook';
 import { Provider } from 'react-redux';
 import store from './Pages/ReactRedux/Store';
 import BookContainer from "./Pages/ReactRedux/BookContainer"
+import Practice1 from './Pages/Practice/Practice1';
+import Header from './ManageContacts/Header';
+import AddContact from './ManageContacts/AddContact';
+import ContactList from './ManageContacts/ContactList';
+import { useEffect, useState } from 'react';
+import uuid4 from 'uuid4';
 
 function App() {
+  const localStorageKey = "contact"
+  const [contact, setContact] = useState(() => {
+    return JSON.parse(localStorage.getItem(localStorageKey)) || []
+  });
+
+  useEffect(() => {
+    localStorage.setItem(localStorageKey, JSON.stringify(contact))
+  }, [contact])
+
+  const addContact = (data) => {
+    setContact([...contact, {id: uuid4(), data}])
+  }
+  const removeContact = (id) => {
+    const updatedList = contact.filter((val) => {
+      return val.id !== id;
+    })
+    setContact(updatedList);
+    
+    // console.log("Button Click");
+  }
   return (
-    <Provider store={store}>
+    <>
+    {/* // <Provider store={store}> */}
     <div className="App">
-      <BookContainer />
+      <Header />
+      <AddContact addContact={addContact} />
+      <ContactList contact={contact} removeContact={removeContact} />
+      {/* <Practice1 /> */}
+      {/* <BookContainer /> */}
       {/* <UseMemoHook /> */}
       {/* <UseCallbackHook /> */}
       {/* <UseReducerHook /> */}
@@ -39,7 +70,8 @@ function App() {
       {/* <MainContextHook /> */}
       {/* <MainFile /> */}
     </div>
-    </Provider>
+    {/* </Provider> */}
+    </>
   );
 }
 

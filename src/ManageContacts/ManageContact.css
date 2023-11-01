@@ -1,0 +1,72 @@
+
+.ContactHeader {
+    background: rgb(139, 17, 17);
+    padding: 0.1rem 0;
+}
+
+.ContactHeader h2 {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 43px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    letter-spacing: 0.1rem;
+}
+
+.addContactFormDiv, .newContactList {
+    padding-left: 3rem;
+}
+
+.addContactFormDiv h3, .newContactList h3 {
+    text-align: left;
+    font-weight: 700;
+    font-size: 29px;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.addContactFormDiv form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.addContactFormDiv form label {
+    text-align: left;
+    font-weight: 600;
+    font-size: 19px;
+    margin-bottom: -11px;
+}
+
+.addContactFormDiv form input {
+    margin-bottom: 0.5rem;
+}
+
+.addContactFormDiv button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 11px;
+}
+
+.list-of-contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background: rgb(172, 47, 67);
+    margin: 0.3rem;
+}
+
+.list-of-contact h4 {
+    color: #FFFFFF;
+    font-size: 21px;
+}
+
+.contact-icon {
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
